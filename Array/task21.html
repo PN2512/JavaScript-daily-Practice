@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Total number of array</h1>
+
+    <script>
+
+        let arr =[3,2,9,44,32,31,4,10,23,22];
+
+        let evenNumber = arr.reduce((count ,current ) => {
+            return current % 2 == 0 ? count + 1 : count ;
+        },0)
+
+        console.log(evenNumber);
+        
+
+
+    </script>
+</body>
+</html>

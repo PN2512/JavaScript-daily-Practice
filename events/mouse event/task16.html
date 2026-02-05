@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Up Event Tasks</title>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px 0;
+    }
+
+    #messageArea {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <button id="myButton">Click Me</button>
+
+  <!-- Task 2 -->
+  <div id="colorBox"></div>
+
+  <!-- Task 3 -->
+  <p id="specialText">Release mouse over this text</p>
+  <div id="messageArea"></div>
+
+  <!-- Task 4 -->
+  <p>Value: <span id="counter">0</span></p>
+
+  <script>
+    // Task 1: Change button text on mouse release
+    const button = document.getElementById("myButton");
+    button.addEventListener("mouseup", () => {
+      button.textContent = "Mouse Released";
+    });
+
+    // Task 2: Restore original background color on mouse release
+    const box = document.getElementById("colorBox");
+    box.addEventListener("mousedown", () => {
+      box.style.backgroundColor = "orange";
+    });
+    box.addEventListener("mouseup", () => {
+      box.style.backgroundColor = "lightblue";
+    });
+
+    // Task 3: Display message on mouse release over specific element
+    const text = document.getElementById("specialText");
+    const message = document.getElementById("messageArea");
+    text.addEventListener("mouseup", () => {
+      message.textContent = "Mouse button released over the text!";
+    });
+
+    // Task 4: Increase value only on mouse release
+    let count = 0;
+    const counter = document.getElementById("counter");
+    document.addEventListener("mouseup", () => {
+      count++;
+      counter.textContent = count;
+    });
+  </script>
+
+</body>
+</html>

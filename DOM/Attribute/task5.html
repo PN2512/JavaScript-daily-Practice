@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Image Source</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    img {
+      display: block;
+      margin-top: 10px;
+      max-width: 300px;
+    }
+
+    button {
+      padding: 8px 16px;
+      margin: 5px 5px 0 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Change Image Source</h2>
+
+<img id="myImage" src="" alt="Image">
+
+<button onclick="showImage1()">Show Image 1</button>
+<button onclick="showImage2()">Show Image 2</button>
+
+<script>
+function showImage1() {
+  document.getElementById("myImage").src = "";
+}
+
+function showImage2() {
+  document.getElementById("myImage").src = "";
+}
+</script>
+
+</body>
+</html>

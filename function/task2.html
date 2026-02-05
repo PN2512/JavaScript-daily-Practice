@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product of Two Numbers</title>
+</head>
+<body>
+  <h1>Product of Two Numbers</h1>
+
+  <script>
+    // Function to calculate and print product
+    function printProduct(num1, num2) {
+      let product = num1 * num2;
+      console.log(`The product of ${num1} and ${num2} is: ${product}`);
+    }
+
+    // Collect input from user using prompt
+    let a = Number(prompt("Enter the first number: "));
+    let b = Number(prompt("Enter the second number: "));
+
+    // Call the function with user input
+    printProduct(a, b);
+  </script>
+</body>
+</html>

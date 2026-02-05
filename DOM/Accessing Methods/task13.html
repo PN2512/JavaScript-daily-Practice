@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple IDs Styling</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Main Title</h1>
+  <p id="description">This is a description paragraph.</p>
+
+  <script>
+    
+    let title = document.getElementById("title");
+    let description = document.getElementById("description");
+
+    
+    title.style.color = "blue";
+    title.style.fontSize = "32px";
+    title.style.textAlign = "center";
+
+    description.style.color = "green";
+    description.style.fontSize = "18px";
+    description.style.backgroundColor = "#f0f0f0";
+    description.style.padding = "10px";
+  </script>
+
+</body>
+</html>

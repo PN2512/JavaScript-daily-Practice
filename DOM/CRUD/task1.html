@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Assignment</title>
+</head>
+<body>
+
+<script>
+    // 1. Create a <div> element
+    let divElement = document.createElement("div");
+    divElement.id = "welcomeDiv"; // Optional ID for reference
+
+    // 2. Create a text node
+    let textNode = document.createTextNode("Welcome to DOM Assignment");
+
+    // 3. Append the text node to the <div>
+    divElement.appendChild(textNode);
+
+    // 4. Append the <div> to the <body>
+    document.body.appendChild(divElement);
+
+    // 5. Create a button
+    let button = document.createElement("button");
+    button.appendChild(document.createTextNode("Change Color"));
+
+    // 6. Append the button to the body
+    document.body.appendChild(button);
+
+    // 7. Add click event to change the div's background color
+    button.addEventListener("click", function() {
+        // Generate a random color
+        let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        divElement.style.backgroundColor = randomColor;
+    });
+</script>
+
+</body>
+</html>

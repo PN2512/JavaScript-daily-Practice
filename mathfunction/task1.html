@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find Maximum of Three Numbers</h1>
+
+ <button onclick="showMax()">click</button>
+     
+
+  <p id="result"></p>
+    <script>
+function showMax(){
+        let a = 10;
+        let b = 25;
+        let c = 5;
+
+
+        let maxNumber = Math.max(a,b,c);
+        console.log(maxNumber);
+
+        
+            document.getElementById("result").innerText =
+                "Maximum number is: " + maxNumber;
+
+}
+    </script>
+</body>
+</html>

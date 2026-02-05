@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>querySelector()</h2>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <button onclick="changeFirstBox()">Change First Box</button>
+
+    <script>
+      function changeFirstBox() {
+        let firstBox = document.querySelector(".box");
+
+        firstBox.style.backgroundColor = "red";
+        firstBox.style.padding = "20px";
+      }
+    </script>
+  </body>
+</html>

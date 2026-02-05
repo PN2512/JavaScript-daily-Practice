@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 2)Display a tooltip message when the mouse hovers over a button. -->
+
+
+<!-- <button id="hoverbtn" onmouseover="showtooltip()" onmouseout="hidetooltip()"> click on  me </button> -->
+ <button id="hoverBtn">Hover </button>
+
+
+<script>
+    // function showtooltip(){
+    //     document.getElementById("hoverbtn").textContent="this is tooltip message on hover";
+
+
+
+
+    // }
+    // function hidetooltip(){
+    //     document.getElementById("hoverbtn").textContent="hover Me"
+    // }
+
+
+    let btn=document.getElementById("hoverBtn");
+    btn.addEventListener("mouseover",()=>{
+         btn.textContent="after hover message ";
+    });
+    btn.addEventListener("mouseout",()=>{
+        btn.textContent="this is tooltip message on hover";
+       
+    })
+     
+
+</script>
+</body>
+</html>

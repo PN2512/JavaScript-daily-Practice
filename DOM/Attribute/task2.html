@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2: Set Attribute</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Task 2: Set Attribute (Disable Button)</h2>
+
+  <button id="myButton" onclick="disableButton()">Click to Disable Me</button>
+
+  <script>
+    function disableButton() {
+
+      let btn = document.getElementById("myButton");
+
+      
+      btn.setAttribute("disabled", "true");
+
+      
+      btn.textContent = "Disabled!";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maximum in reduce</h1>
+
+
+    <script>
+
+
+        let arr = [20,30,10,22,50,60,24];
+
+        let maxNumber = arr.reduce((max,current )=>{
+            return current > max ? current : max;
+        },arr[0]);
+
+        console.log(maxNumber);
+        
+
+
+    </script>
+</body>
+</html>

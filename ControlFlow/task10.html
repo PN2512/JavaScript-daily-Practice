@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>maximun and minimum </h1>
+    <script>
+
+        
+        let first = Number(prompt("Enter first number:"));
+        let second = Number(prompt("Enter second number:"));
+        let third = Number(prompt("Enter third number:"));
+
+        let max, min;
+
+        // Find maximum
+        if (first >= second && first >= third) {
+            max = first;
+        } else if (second >= first && second >= third) {
+            max = second;
+        } else {
+            max = third;
+        }
+
+        // Find minimum
+        if (first <= second && first <= third) {
+            min = first;
+        } else if (second <= first && second <= third) {
+            min = second;
+        } else {
+            min = third;
+        }
+
+        console.log("Maximum number =", max);
+        console.log("Minimum number =", min);
+
+
+    </script>
+</body>
+</html>

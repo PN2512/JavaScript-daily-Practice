@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Disable Ctrl + Z (Undo)</h1>
+
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At!</p>
+
+
+    <script>
+
+
+document.addEventListener("keydown",function(event){
+    if(event.ctrlKey && event.key.toLowerCase()==="z" || event.key.toUpperCase()==="Z"){
+        event.preventDefault();
+        alert("crtl + z (undo) is disabale on this page")
+    }
+})
+    </script>
+</body>
+</html>

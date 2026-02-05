@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>getElementsByClassName()</h2>
+
+
+    <p  class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, explicabo?-1</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, explicabo?-2</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, explicabo?-3</p>
+
+    <button onclick="changeStyle()">Apply Style</button>
+
+
+
+    <script>
+
+        function changeStyle(){
+            let paragraphs = document.getElementsByClassName("para");
+
+
+            for(let i=0;i<paragraphs.length;i++){
+                paragraphs[i].style.fontWeight="bold";
+                paragraphs[i].style.color="green";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

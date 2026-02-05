@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Keyboard Controlled Counter</h1>
+
+    <div id="counter">0</div>
+    <p>press arrow-up to increase and arrow-down to decrease R to Reset</p>
+
+    <script>
+    let counter = 0;
+    const counterDisplay = document.getElementById("counter");
+
+    // Function to update display
+    function updateCounter() {
+      counterDisplay.textContent = counter;
+    }
+
+    // Listen for key presses
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowUp") {
+        counter++;
+      } else if (event.key === "ArrowDown") {
+        counter--;
+      } else if (event.key.toLowerCase() === "r") {
+        counter = 0;
+      }
+      updateCounter();
+    });
+  </script>
+
+    
+</body>
+</html>

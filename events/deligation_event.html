@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>submit from </button>
+
+    <script>
+        let btn=document.querySelector("button")
+        // btn=addEventListener("mousemove",submitForm)
+        // btn=addEventListener("mouseover",submitForm)
+        btn=addEventListener("click",submitForm)
+
+        function submitForm(){
+            // alert("form Submited...!")
+            console.log("payment Successful...!")
+            btn.removeEventListener("click",submitForm);
+        }
+    </script>
+</body>
+</html>

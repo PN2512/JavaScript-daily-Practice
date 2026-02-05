@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count Vowels and Consonants</h1>
+
+    <script>
+
+        let str = "Hello World";
+        str= str.toLocaleLowerCase();
+
+        let Vowels=0;
+        let Consonants=0;
+         for(let i = 0 ; i < str.length;i++){
+            let ch=str[i];
+
+            if(ch >= 'a' && ch <= 'z'){
+                if(ch === 'a' || ch ==='e' || ch ==='i' || ch ==='o' || ch === 'u'){
+                    Vowels++;
+                }
+                else{
+                    Consonants++;
+                }
+            }
+
+            
+         }
+         console.log("Vowels:",Vowels);
+            console.log("Consonants:",Consonants)
+
+    </script>
+</body>
+</html>

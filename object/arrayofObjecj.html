@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Of Object</h1>
+
+    <script>
+      let student1 = {
+        Id: 1,
+        name: "ajay",
+        age: 23,
+        clg: "pune",
+      };
+      let student2 = {
+        Id: 2,
+        name: "aman",
+        age: 22,
+      };
+
+      // array of object
+
+      let students = [
+        {
+          Id: 1,
+          name: "ajay",
+          age: 23,
+          clg: "pune",
+        },
+        {
+          Id: 2,
+          name: "aman",
+          age: 22,
+        },
+      ];
+
+      console.log(students[0].name);
+      console.log(students[1].age);
+
+     for(i=0 ; i<students.length;i++){
+        console.log(students[i].name + " collage name " + students[0].clg);
+     } 
+
+    </script>
+  </body>
+</html>

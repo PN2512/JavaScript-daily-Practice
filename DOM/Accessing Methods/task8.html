@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+    
+    .highlight {
+      color: white;
+      background-color: purple;
+      padding: 15px;
+      font-size: 28px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <h2 id="text">classList.add()</h2>
+
+    <button onclick="addClass()">Add Class</button>
+
+
+
+      <script>
+    function addClass() {
+      
+      let element = document.getElementById("text");
+
+      
+      element.classList.add("highlight");
+    }
+  </script>
+
+</body>
+</html>

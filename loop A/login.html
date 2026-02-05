@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+        let check=1;
+        let userName;
+ let PassWord;
+       do{
+         if(check==1){
+            userName=prompt("Enter a userName :");
+          PassWord=prompt("Enter a PassWord :");
+
+        if(userName=="demo" && PassWord=="demo@1234"){
+            alert("Successfully Login");
+        }
+        else{
+            alert(" Login not Successfully");
+            check++;
+        }
+         }
+else if(check==2){
+     userName=prompt("ReEnter a userName :");
+          PassWord=prompt("ReEnter a PassWord :");
+
+        if(userName=="demo" && PassWord=="demo@1234"){
+            alert("Successfully Login");
+        }
+        else{
+            alert(" Login not Successfully");
+            check++;
+        }
+
+}
+else if( check==3){
+     userName=prompt("last chance Enter correct userName :");
+          PassWord=prompt("last chance Enter correct PassWord :");
+
+        if(userName=="demo" && PassWord=="demo@1234"){
+            alert("Successfully Login");
+        }
+        else{
+            alert(" Login not Successfully");
+            check++;
+        }
+}
+
+
+       } while(!(userName=="demo" && PassWord=="demo@1234"))
+
+    </script>
+</body>
+</html>

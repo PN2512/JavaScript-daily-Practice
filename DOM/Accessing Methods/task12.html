@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini DOM Challenge</title>
+
+  <style>
+    
+    .highlight {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <h1 id="mainHeading">Mini DOM Challenge</h1>
+
+  
+  <p class="text">This is the first paragraph.</p>
+  <p class="text">This is the second paragraph.</p>
+
+  
+  <button>Click Me</button>
+
+  <script>
+    
+    let heading = document.getElementById("mainHeading");
+    heading.style.color = "blue";
+    heading.style.fontSize = "36px";
+    heading.style.textAlign = "center";
+
+    
+    let paragraphs = document.getElementsByClassName("text");
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = "green";
+      paragraphs[i].style.fontSize = "18px";
+    }
+
+    
+    let btn = document.querySelector("button");
+    btn.style.setProperty("background-color", "teal"); 
+    btn.style.setProperty("color", "white");
+    btn.style.setProperty("padding", "10px 20px");
+    btn.style.border = "none";
+    btn.style.borderRadius = "6px";
+
+    
+    btn.addEventListener("click", function () {
+      heading.classList.toggle("highlight");
+    });
+  </script>
+
+</body>
+</html>

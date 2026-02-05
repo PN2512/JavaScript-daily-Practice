@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Password Visibility</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Toggle Password Visibility</h2>
+
+<input type="password" id="passwordInput" placeholder="Enter password">
+<button onclick="togglePassword()">Show/Hide Password</button>
+
+<script>
+function togglePassword() {
+  let pass = document.getElementById("passwordInput");
+  if (pass.type === "password") {
+    pass.type = "text";
+  } else {
+    pass.type = "password";
+  }
+}
+</script>
+
+</body>
+</html>

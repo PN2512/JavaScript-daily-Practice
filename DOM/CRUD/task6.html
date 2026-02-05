@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Child Example</title>
+</head>
+<body>
+
+<ul id="list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+</ul>
+
+<!-- Button to remove "Banana" -->
+<button id="removeButton">Remove "Banana"</button>
+
+<script>
+    // 1. Get the parent <ul> and the button
+    let list = document.getElementById("list");
+    let button = document.getElementById("removeButton");
+
+    // 2. Add click event to remove "Banana"
+    button.onclick = function() {
+        // Get all <li> elements
+        let items = list.getElementsByTagName("li");
+
+        // Loop to find "Banana"
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].textContent === "Banana") {
+                list.removeChild(items[i]); // Remove the "Banana" li
+                break; // Exit loop after removing
+            }
+        }
+    };
+</script>
+
+</body>
+</html>

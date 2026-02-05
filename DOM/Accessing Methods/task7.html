@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="heading"> Styling using style.setProperty()</h2>
+
+    <button onclick="applyStyle()">Apply Style</button>
+
+
+
+    <script>
+
+        function applyStyle(){
+            let heading=document.getElementById("heading");
+
+
+            heading.style.setProperty("font-size","36px");
+            heading.style.setProperty("text-transform","uppercase");
+            heading.style.setProperty("letter-spacing","3px");
+        }
+
+    </script>
+</body>
+</html>

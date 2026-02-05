@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function formatEmail</h1>
+
+    <script>
+        function formatEmail(username = "user", domain = "example.com") {
+            return `${username}@${domain}`;
+        }
+
+        console.log(formatEmail());                 
+        console.log(formatEmail("pravin", "gmail.com")); 
+    </script>
+</body>
+</html>

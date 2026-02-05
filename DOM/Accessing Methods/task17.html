@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>querySelectorAll with Class</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .item {
+      background-color: #f8f8f8;
+      padding: 10px;
+      margin: 5px 0; /* default margin */
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>querySelectorAll with Class Example</h2>
+
+  <p class="item">Item 1</p>
+  <p class="item">Item 2</p>
+  <p class="item">Item 3</p>
+  <p class="item">Item 4</p>
+
+  <button onclick="styleItems()">Style All Items</button>
+
+  <script>
+    function styleItems() {
+      // Select all elements with class 'item'
+      let items = document.querySelectorAll(".item");
+
+      // Apply styles to all selected elements
+      items.forEach(function(el) {
+        el.style.margin = "15px 0";
+        el.style.fontSize = "20px";
+        el.style.backgroundColor = "#d1e7dd"; // optional extra styling
+      });
+    }
+  </script>
+
+</body>
+</html>

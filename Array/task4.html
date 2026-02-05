@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>use all methods of array</h1>
+
+
+    <script>
+        let arr=[10,20,30,40,50]
+
+        console.log("length",arr.length);//print the length
+
+
+        arr.push(60);
+        console.log("After push",arr);// add at end 
+
+        arr.pop();
+        console.log("In pop",arr);//remove last one 
+
+        arr.shift();
+        console.log("in Shift",arr);//remove first from arr
+
+        arr.unshift(5);
+        console.log("in Unshift",arr);//add at start
+        
+        console.log("Index of 30",arr.indexOf(30)); // find index of the array
+
+
+        console.log("Include 40?", arr.includes(40));// include 40 
+
+        console.log("Slice (1,3):",arr.slice(1,3)); // copy part of array 
+
+        arr.splice("splice(2,1,99)");// revove 1 at index 2 ,insert 99
+        console.log("In splice",arr);
+
+
+        let arr2 = [70 ,80];
+        let combined = arr.concat(arr2);// combine two array 
+        console.log("concat :",combined);
+
+
+        console.log("join with '-':",arr.join("-"));//join array
+
+
+        console.log("Reverse:",[...arr].reverse());//reverse the array
+
+        console.log("sort ascending:",[...arr].sort((a,b)=>a-b));// sort
+
+        arr.forEach(num => console.log("forEach:",num));
+
+        let doubled = arr.map(num => num * 2);
+        console.log("map (doubled):",doubled);
+
+
+        let evens = arr.filter(num => num % 2 == 0);
+        console.log("filter(evens)",evens);
+
+
+        let sum = arr.reduce((acc,curr)=> acc + curr,0);
+        console.log("reduce(sum):",sum);
+
+
+        console.log("find > 30:",arr.find(num => num >30));
+
+
+        console.log("findindex of >30 :",arr.findIndex (num => num > 30));
+
+
+        console.log("some > 40?",arr.every(num => num >0));
+
+
+
+        let nested = [1,[2,3],[4,[5]]];
+        console.log("flat",nested.flat(2));
+
+
+        let str ="123344";
+        console.log("array from :",Array.from(str));
+
+
+
+        console.log("Is Array?",Array.isArray(arr));
+        
+        
+        
+
+
+        
+
+
+
+
+
+
+
+        
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>

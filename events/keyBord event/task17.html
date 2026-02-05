@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #toast{
+            visibility: hidden;
+            min-width: 300px;
+            background-color: rgb(56, 55, 55);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px ;
+            padding: 15px;
+            position: fixed;
+            z-index: 9999;
+            left: 60%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            
+        }
+        #toast.show{
+            visibility: visible;
+            animation: fadein 0.7s , fadeout 0.6s 4.5s;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1> Exam Mode Keyboard Lock</h1>
+    <p>press any key from ctrl+ A , ctrl + C , ctrl + V , ctrl + P , ctrl + S  or  F12 </p>
+
+    <div id="toast"> shortcut are disabled in  Exam  Mode</div>
+
+
+
+    <script>
+        function showToast(message){
+            let toast=document.getElementById("toast");
+            toast.textContent=message;
+            toast.className="show";
+
+            setTimeout(()=>{
+                toast.className = toast.className.replace("show","");
+            },3000);
+        };
+        document.addEventListener("keydown",function(event){
+            let blockedShortcut = [
+                {ctrl:true , key:"a" || "A"},
+                {ctrl:true , key:"c" || "C"},
+                {ctrl:true , key:"v" || "V"},
+                {ctrl:true , key:"p" || "P"},
+                {ctrl:true , key:"s" || "S"},
+                {ctrl:false, key :"f12" || "F12"}
+            ];
+
+            for(let shortcut of blockedShortcut){
+                if((shortcut.ctrl && event.ctrlKey && event.key.toLowerCase()===shortcut.key) ||(!shortcut.ctrl && event.key=== shortcut.key)  ){
+                    event.preventDefault();
+                    showToast(`Shortcut "${shortcut.ctrl ?" ctrl + ":""} ${shortcut.key.toUpperCase()}" is disabled in Exam mode `);
+                    return false;
+
+                }          }
+        });
+    </script>
+</body>
+</html>

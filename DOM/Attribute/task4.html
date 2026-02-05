@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Attribute Exists</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input, button {
+      padding: 8px 12px;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Check Attribute Exists</h2>
+
+<input type="text" id="myInput" required placeholder="Required input">
+<button onclick="checkRequired()">Check Required</button>
+
+<script>
+function checkRequired() {
+  let input = document.getElementById("myInput");
+  if (input.hasAttribute("required")) {
+    alert("'required' attribute exists!");
+  } else {
+    alert("'required' attribute does not exist!");
+  }
+}
+</script>
+
+</body>
+</html>

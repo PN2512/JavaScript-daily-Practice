@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <script>
+        let op =prompt("Enter Operater (+, -, *, /) ");
+let result,a,b;
+        switch(op){
+        case "+":
+         a = Number(prompt("Enter any Number"));
+         b = Number(prompt("Enter any number"));
+            result=a+b;
+            break;
+             case "-":
+         a = Number(prompt("Enter any Number"));
+         b = Number(prompt("Enter any number"));
+            result=a-b;
+            break;
+             case "*":
+         a = Number(prompt("Enter any Number"));
+         b = Number(prompt("Enter any number"));
+            result=a*b;
+            break;
+             case "/":
+        a = Number(prompt("Enter any Number"));
+         b = Number(prompt("Enter any number"));
+            result=a/b;
+            break;
+            default:
+                console.log("Invalide Entry");
+                
+        }
+        console.log(result);
+        
+    </script>
+</body>
+</html>

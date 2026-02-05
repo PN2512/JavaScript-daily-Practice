@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM List with Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* ul {
+            list-style-type: circle;
+            font-size: 18px;
+            padding: 15px;
+            width: fit-content;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        } */
+
+        li {
+            margin: 6px 0;
+        }
+
+        /* button {
+             margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        } */
+
+        /* button:hover {
+            background-color: #45a049;
+        } */
+    </style>
+</head>
+<body>
+
+<script>
+    // 1. Create the <ul> element
+    let ulElement = document.createElement("ul");
+
+    // 2. Create 5 <li> items
+    for (let i = 1; i <= 5; i++) {
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode("Item " + i));
+        ulElement.appendChild(li);
+    }
+
+    // 3. Append the <ul> to the body
+    document.body.appendChild(ulElement);
+
+    // 4. Create a button
+    let button = document.createElement("button");
+    button.appendChild(document.createTextNode("Add New Item"));
+
+    // 5. Append the button to the body
+    document.body.appendChild(button);
+
+    // 6. Button click event to add a new item
+    let count = 6; // next item number
+    button.addEventListener("click", function() {
+        let newLi = document.createElement("li");
+        newLi.appendChild(document.createTextNode("Item " + count));
+        ulElement.appendChild(newLi);
+        count++;
+    });
+</script>
+
+</body>
+</html>

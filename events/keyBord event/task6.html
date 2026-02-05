@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Disable Specific Keys</h1>
+    <p>Right-click key , F12 , Ctrl + C</p>
+
+    <div id="warning">Action is Disable</div>
+
+    <script>
+      let warn = document.getElementById("warning");
+      let timeout;
+
+      function showWarning() {
+        warn.style.display = "block";
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          warning.style.display = "none";
+        }, 1500);
+      }
+
+      document.addEventListener("mousedown",function(e){
+        if(e.button === 2){
+            e.preventDefault();
+            alert(`Right click is disable or block`);
+        }
+      })
+      document.addEventListener("keydown",function(event){
+        if(event.keyCode===123){
+            event.preventDefault();
+            alert(`F12 is disable or blocked `)
+        }
+
+        if(event.ctrlKey && event.keyCode === 67){
+            event.preventDefault();
+            alert(`the Ctrl + c is disable or block `)
+        }
+        if (event.ctrlKey && event.keyCode === 65){
+            event.preventDefault();
+            alert(`The Ctrl + a is block or disabale `)
+        }
+      })
+    
+
+    </script>
+  </body>
+</html>

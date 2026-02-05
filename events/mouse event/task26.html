@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box{
+            width: 200px;
+            height: 230px;
+            border: 2px solid black;
+            background: aquamarine;
+            margin: 50px;
+
+        }
+    </style>
+</head>
+<body>
+     <!-- 3)Show “Pressed” on mousedown and “Released” on mouseup. -->
+
+
+     <div id="box">Released</div>
+
+
+
+     <script>
+
+        let box=document.getElementById("box")
+
+        box.addEventListener("mousedown",()=>{
+            box.textContent="Pressed";
+            box.style.background="pink"
+        });
+        box.addEventListener("mouseout",()=>{
+            box.textContent="Released"
+            box.style.background="aquamarine"
+        })
+
+     </script>
+</body>
+</html>

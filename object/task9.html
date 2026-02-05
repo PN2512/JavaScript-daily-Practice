@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Discount 10% Add New Property</h1>
+
+    <script>
+
+
+        let product ={name:"Mouse",price:1000,discount:10}
+
+
+        let discountAmount = (product.price*product.discount)/100;
+
+
+        let finalPrice = product.price - discountAmount;
+
+
+
+        console.log("product name -",product.name);
+        console.log( "the product amount without discount- ",product.price);
+        console.log("this is discount -",product.discount+"%");
+        console.log("this is discount amount -",discountAmount);
+        console.log("this is final price of product -",finalPrice)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>classList.remove Example</title>
+
+  <style>
+    
+    .active {
+      color: white;
+      background-color: green;
+      padding: 15px;
+      font-size: 26px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <h2 id="message" class="active">This text has a class</h2>
+
+  <button onclick="removeClass()">Remove Class</button>
+
+  <script>
+    function removeClass() {
+      
+      let element = document.getElementById("message");
+
+      
+      element.classList.remove("active");
+    }
+  </script>
+
+</body>
+</html>

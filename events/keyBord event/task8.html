@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Disable Ctrl + A (Select All)</h1>
+
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit corporis consectetur laudantium natus, sint commodi cum nam suscipit repudiandae cupiditate beatae, accusantium praesentium corrupti similique accusamus! Fugit debitis totam iure?
+    Fugiat fuga inventore quisquam optio architecto eaque, provident alias cupiditate incidunt sequi expedita facere nulla quam officia facilis laboriosam repudiandae ut ducimus omnis possimus assumenda excepturi! Nulla eligendi officia sunt.
+    Eius nam consequuntur, debitis fuga atque repellendus voluptas ad consectetur, saepe ex modi facilis facere labore provident tenetur! Ullam ipsum odio eius neque odit porro, culpa cum quam itaque assumenda?</p>
+
+
+    <script>
+        
+        document.addEventListener("keydown",function(event){
+            if(event.ctrlKey && event.key.toLocaleLowerCase()==="a" || event.key.toUpperCase()==="A"){
+                event.preventDefault();
+                alert("Select All is Disable on this page ")
+            }
+        })
+        
+    </script>
+</body>
+</html>

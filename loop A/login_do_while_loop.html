@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login using do while </title>
+</head>
+<body>
+    <script>
+        let username;
+        let passward ;
+
+        do{
+            username = prompt("ENTER THE NAME ");
+            passward = prompt("ENTER PASSWARD ");
+
+
+            if((username == "demo")&&(passward == "demo@123")){
+                alert("login successfuly");
+
+            }
+            else{
+                alert(" INVALID USERNAME OR PASSWARD");
+            }
+        }
+        while(!((username == "demo")&&(passward == "demo@123")));
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Menu-Driven Program</h1>
+
+    <script>
+      let choice = prompt("Enter Choice (1 =Add ,2= Sub , 3=Mul , 4=Div)");
+
+      let num1 = Number(prompt("Enter First Number "));
+      let num2 = Number(prompt("Enter Second Number "));
+
+      switch (choice) {
+        case "1":
+          console.log("Result = " + (num1 + num2));
+          break;
+        case "2":
+          console.log("Result = " + (num1 - num2));
+          break;
+        case "3":
+          console.log("Result =" + (num1 * num2));
+          break;
+        case "4":
+          console.log("Result = " + (num1 / num2));
+          break;
+
+          default:
+            console.log("Invalid Choice");
+            
+      }
+    </script>
+  </body>
+</html>

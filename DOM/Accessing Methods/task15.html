@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tag-based Font Styling</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tag-based Font Styling</h2>
+
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph.</p>
+  <p>This is the fourth paragraph.</p>
+
+  <button onclick="changeFont()">Change Font</button>
+
+  <script>
+    function changeFont() {
+      // Select all <p> elements
+      let paragraphs = document.getElementsByTagName("p");
+
+      // Change font family for all paragraphs
+      for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.fontFamily = "Courier New, monospace";
+        paragraphs[i].style.color = "darkgreen"; // optional extra styling
+      }
+    }
+  </script>
+
+</body>
+</html>

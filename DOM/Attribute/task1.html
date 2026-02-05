@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1: Get Attribute Value</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Task 1: Get Attribute Value</h2>
+
+  <input type="text" id="myInput" placeholder="Enter your name">
+  <button onclick="getPlaceholder()">Show Placeholder in Console</button>
+
+  <script>
+    function getPlaceholder() {
+      
+      let input = document.getElementById("myInput");
+
+      
+      let placeholderValue = input.getAttribute("placeholder");
+
+      
+      console.log("Placeholder value:", placeholderValue);
+    }
+  </script>
+
+</body>
+</html>

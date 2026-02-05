@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before on Click</title>
+</head>
+<body>
+
+<ul id="menu">
+    <li>Home</li>
+    <li>About</li>
+</ul>
+
+<!-- Button to insert "Services" -->
+<button id="insertButton">Insert "Services"</button>
+
+<script>
+    // 1. Get references
+    let menu = document.getElementById("menu");
+    let button = document.getElementById("insertButton");
+
+    // 2. Add click event to the button
+    button.onclick = function() {
+        // Check if "Services" already exists to avoid duplicates
+        let items = menu.getElementsByTagName("li");
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].textContent === "Services") {
+                alert('"Services" already exists!');
+                return;
+            }
+        }
+
+        // 3. Create new <li> for "Services"
+        let newItem = document.createElement("li");
+        newItem.textContent = "Services";
+
+        // 4. Reference node is "About"
+        let aboutItem = items[1]; // second <li> is "About"
+
+        // 5. Insert "Services" before "About"
+        menu.insertBefore(newItem, aboutItem);
+    };
+</script>
+
+</body>
+</html>

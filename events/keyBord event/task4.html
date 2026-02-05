@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prees any key </h1>
+    <h3 >The total count is:<span id="countTotal"></span> </h3>
+
+
+    <script>
+
+        let count=0
+         document.addEventListener("keydown",function (){
+            count++;
+
+            document.getElementById("countTotal").innerHTML=count;
+         })
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Element Example</title>
+</head>
+<body>
+
+<div id="box">
+    <p>Old Paragraph</p>
+</div>
+
+<!-- Button to replace the paragraph -->
+<button id="replaceButton">Replace Paragraph</button>
+
+<script>
+    // 1. Get the parent div and the button
+    let box = document.getElementById("box");
+    let button = document.getElementById("replaceButton");
+
+    // 2. Add click event to the button
+    button.onclick = function() {
+        // Create a new <p> element
+        let newPara = document.createElement("p");
+        newPara.textContent = "This paragraph has been replaced";
+
+        // Get the old paragraph
+        let oldPara = box.getElementsByTagName("p")[0];
+
+        // Replace old paragraph with new one
+        box.replaceChild(newPara, oldPara);
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable</title>
+  </head>
+  <body>
+    <h1>Introduction </h1>
+    <script>
+      // 1) Print your name using variables (var, let, const)
+      var firstname = "Pravin";
+      var lastname = "Nagre";
+      console.log(firstname, lastname);
+
+      let fname = "Pravin";
+      let lname = "Nagre";
+      console.log(fname, lname);
+
+      const fullname = "Pravin Nagre";
+      console.log(fullname);
+
+      // 2) Difference between var, let, and const
+      
+      var x = 10;
+      var x = 20; // Redeclaration allowed
+      let y = 30;
+      // let y = 40;  Cannot redeclare 'y'
+      const z = 50;
+      // const z = 60;  Cannot redeclare or reassign 'z'
+
+      console.log("var x:", x);
+      console.log("let y:", y);
+      console.log("const z:", z);
+
+      // 3) Example of "use strict"
+      "use strict";
+      // undeclaredVar = 100;  Error: must declare before use
+      let declaredVar = 200; //  Correct
+      console.log("declaredVar:", declaredVar);
+    </script>
+  </body>
+</html>

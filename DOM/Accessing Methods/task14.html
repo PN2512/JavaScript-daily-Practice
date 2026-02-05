@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class-based Color Change</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .item {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Class-based Color Change</h2>
+
+  <p class="item">Item 1</p>
+  <p class="item">Item 2</p>
+  <p class="item">Item 3</p>
+  <p class="item">Item 4</p>
+  <p class="item">Item 5</p>
+
+  <button onclick="changeEvenColors()">Change Even Colors</button>
+
+  <script>
+    function changeEvenColors() {
+      // Select all elements with class 'item'
+      let items = document.getElementsByClassName("item");
+
+      // Change color of even-indexed elements
+      for (let i = 0; i < items.length; i++) {
+        if (i % 2 === 0) {
+          items[i].style.color = "red";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+Function task 
+
+
+  // TASK
+        // Create a function that prints the addition of two numbers.
+
+
+        // Create a function that takes two numbers and prints their product.
+
+
+        // Write a function that subtracts one number from another and returns the result.
+
+        // Write a function divide(a, b) that returns the result of dividing a by b. Set a default value of 1 for b.
+
+
+        // Create a function greet(name = "User") that prints a greeting message like "Hello, User!".
+
+        // Write a function square(num = 2) that returns the square of a number.
+
+
+        // Create a function fullName(firstName, lastName = "Doe") that prints the full name of a person.
+
+        // Write a function findArea(length = 5, width = 10) that returns the area of a rectangle.
+
+
+        // Create a function showAge(name = "Unknown", age = 0) that prints a sentence like "Unknown is 0 years old.".
+
+        // Write a function isEven(num = 0) that returns true if the number is even, and false otherwise.
+
+        // Create a function repeatMessage(message = "Hi", times = 3) that prints the message multiple times.
+
+        // Write a function formatEmail(username = "user", domain = "example.com") that returns an email address in the format user@example.com.
+
+        // Write a function isPositive(num = 0) that returns true if the number is positive, false otherwise.
+
+        // Create a function minValue(a = 10, b = 20) that returns the smaller of the two numbers.
+
+
+        // Write a function maxValue(a = 10, b = 20) that returns the larger of the two numbers.
+
+
+
+
+Array task 
+
+
+   //   TASK
+//     🔹 1. Tasks on every() Method
+// Task 1
+// Given an array of numbers, check whether all numbers are positive.
+// Input:
+// [3, 5, 7, 9]
+
+// Task 2
+// Check if all students have scored more than 40 marks.
+// Input:
+// [45, 67, 80, 41]
+
+// Task 3
+// Given an array of strings, check whether all strings have length greater than 3.
+
+// 🔹 2. Tasks on some() Method
+// Task 1
+// Check whether at least one number is even in the array.
+// Input:
+// [1, 3, 5, 8, 9]
+
+// Task 2
+// Check if any student has failed (marks < 35).
+// Input:
+// [56, 78, 34, 90]
+
+// Task 3
+// Given an array of email IDs, check whether any email contains "@gmail.com".
+
+
+
+
+
+// 🔹 3. Tasks on filter() Method
+// Task 1
+// Filter out even numbers from the given array.
+// Input:
+// [10, 15, 20, 25, 30]
+// Expected Output:
+// [10, 20, 30]
+
+
+// Task 2
+// From an array of ages, return only those eligible to vote (age ≥ 18).
+
+
+// Task 3
+// Given an array of strings, filter all words that start with the letter 'a'.
+
+
+// Task 4
+// Filter all numbers greater than 50 from the array.
+
+
+// 🔹 4. Tasks on find() Method
+// Task 1
+// Find the first number greater than 100 in the array.
+// Input:
+// [45, 90, 120, 150]
+
+// Task 2
+// Find the first even number from the array.
+
+
+// Task 3
+// Given an array of user objects, find the user whose id is 3.
+
+// [
+//   { id: 1, name: "Amit" },
+//   { id: 2, name: "Rahul" },
+//   { id: 3, name: "Neha" }
+// ]
+
+
+// 🔹 5. Tasks on map() Method
+// Task 1
+// Create a new array by doubling each number.
+// Input:
+// [2, 4, 6]
+// Expected Output:
+// [4, 8, 12]
+
+
+
+// 🔹 6. Tasks on reduce() Method
+// Task 1
+// Find the sum of all elements in the array.
+// Input:
+// [5, 10, 15]
+
+// Task 2
+// Find the maximum number in the array using reduce.
+
+
+// Task 3
+// Count the total number of even elements in the array.
+
+
+// Task 4
+// Given an array of prices, calculate the total bill amount.
+// Input:
+// [199, 299, 399]
+
+
+
+ // TASK
+//         1. Print Array Elements
+// Write a program to read N elements into an array and print them in the same order.
+
+
+// 2. Sum of Array Elements
+// Given an array of integers, find and print the sum of all elements.
+
+
+// 3. Count Even and Odd Numbers
+// Given an array, count how many even and odd numbers are present.
+
+// 4) use all methods of array
+
+

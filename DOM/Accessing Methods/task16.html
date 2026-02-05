@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>querySelector with ID</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #box {
+      width: 200px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>QuerySelector with ID Example</h2>
+
+  <div id="box">I am a box</div>
+
+  <button onclick="styleBox()">Style the Box</button>
+
+  <script>
+    function styleBox() {
+      // Select element with ID using querySelector
+      let box = document.querySelector("#box");
+
+      // Apply styles
+      box.style.border = "2px solid blue";
+      box.style.padding = "20px";
+      box.style.backgroundColor = "#f0f8ff";
+      box.style.borderRadius = "10px"; // optional extra styling
+    }
+  </script>
+
+</body>
+</html>

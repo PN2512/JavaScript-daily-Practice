@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Down Events</title>
+  <style>
+    #myButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4ecdc4;
+      border: 2px solid #333;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.2s, border 0.2s;
+    }
+
+    #myBox {
+      width: 200px;
+      height: 150px;
+      border: 3px dashed red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="myButton">Click Me</button>
+  <div id="myBox">Box</div>
+  <p id="myPara">Paragraph</p>
+  <p>Mouse Press Count: <span id="count">0</span></p>
+
+  <script>
+    const button = document.getElementById('myButton');
+    const box = document.getElementById('myBox');
+    const para = document.getElementById('myPara');
+    const countSpan = document.getElementById('count');
+
+    let mouseDownCount = 0;
+
+    // 1) Mouse down on button
+    button.addEventListener('mousedown', () => {
+      // 2) Change text
+      button.textContent = "Mouse Pressed";
+
+      // 5) Change background color
+      button.style.backgroundColor = "#ffe66d";
+
+      // 6) Count presses
+      mouseDownCount++;
+      countSpan.textContent = mouseDownCount;
+    });
+
+    // Reset button text and color when mouse is released
+    button.addEventListener('mouseup', () => {
+      button.textContent = "Click Me";
+      button.style.backgroundColor = "#4ecdc4";
+    });
+
+    // 3) Mouse down on box
+    box.addEventListener('mousedown', () => {
+      box.style.border = "3px solid green"; // Change border style
+    });
+
+    // Optional: revert border on mouseup
+    box.addEventListener('mouseup', () => {
+      box.style.border = "3px dashed red";
+    });
+
+    // 4) Mouse down on paragraph
+    para.addEventListener('mousedown', () => {
+      para.textContent = "Mouse Down Event Triggered";
+    });
+
+    // Optional: revert paragraph text
+    para.addEventListener('mouseup', () => {
+      para.textContent = "Paragraph";
+    });
+
+  </script>
+</body>
+</html>

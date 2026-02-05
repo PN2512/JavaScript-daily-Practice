@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Text Typing tracker </h1>
+
+    <div id="display"></div>
+
+    <p>The Charcters :  <span id="count"> 0</span></p>
+
+    <script>
+        let text="";
+        document.addEventListener("keydown",function(event){
+            if(event.key === "backspace"){
+                text.text.slice(0,-1)
+            }
+            else if(event.key.length ===1){
+                text += event.key;
+            }
+            document.getElementById("display").innerHTML = text ;
+            document.getElementById("count").innerHTML = text.length;
+        })
+    </script>
+</body>
+</html>

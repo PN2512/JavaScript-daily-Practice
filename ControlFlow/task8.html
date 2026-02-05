@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Any integer</h1>
+    <h3>Even Odd with Positive And Negative</h3>
+
+    <script>
+        let num = Number(prompt("Enter a number"));
+
+        if(num > 0  && num % 2 == 0){
+            console.log("Positive Even");
+        }
+        else if(num > 0 && num % 2 != 0){
+            console.log("Positive Odd");
+        }
+        else if(num < 0 && num % 2 == 0){
+            console.log("Negetive Even");
+        }
+        else if (num < 0 && num % 2 != 0){
+            console.log("Negative Odd");
+            
+        }
+        else{
+            console.log("ZERO");
+            
+        }
+
+    </script>
+    
+</body>
+</html>

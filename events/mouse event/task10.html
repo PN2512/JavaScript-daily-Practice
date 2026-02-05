@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Double-click the image to change it</h3>
+
+    <img 
+        id="myImage" 
+        src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg" 
+        ondblclick="changeImage()" 
+        alt="Image"
+    >
+
+    <script>
+        function changeImage() {
+            let img = document.getElementById("myImage");
+            img.src = img.src.includes("1545743") 
+                ? "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg" 
+                : "https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg";
+        }
+    </script>
+
+</body>
+</html>

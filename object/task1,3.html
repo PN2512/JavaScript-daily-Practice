@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object that contains one function print your fullname,friend(15) using call method</h1>
+
+
+
+    <script>
+
+
+let person ={
+    printDetails: function(friends){
+        console.log("full Name ", this.fullName);
+        console.log("Friend List ",friends);
+    }
+}
+
+let user ={
+    fullname :"Pravin Nagre"
+};
+
+
+
+let friendsList=["Friend 1","Friend 2","Friend 3","Friend 4","Friend 5","Friend 6","Friend 7","Friend 8","Friend 9","Friend 10","Friend 11","Friend 12","Friend 13","Friend 14","Friend 15"];
+
+
+// use call()method
+
+
+person.printDetails.call(user,friendsList);
+
+
+
+    </script>
+</body>
+</html>

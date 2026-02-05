@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>addition of two numbers</h1>
+
+    <script>
+      // function add(a=10,b=50 ){
+      //     console.log(a+b);
+
+      // }
+      // add();
+
+      function calculater(num1, opt, num2) {
+        let result;
+
+        switch (opt) {
+          case "+":
+            result = num1 + num2;
+            break;
+
+          case "-":
+            result = num1 - num2;
+            break;
+
+          case "*":
+            result = num1 * num2;
+            break;
+
+          case "/":
+            result = num1 / num2;
+            break;
+
+          default:
+            result = "Invalid Operater";
+        }
+        console.log(`the result of ${num1} ${opt} ${num2} = ${result}`);
+      }
+
+      num1 = Number(prompt("enter any one number "));
+      opt = prompt(" enter any operater (+ , - , / , *) ");
+      num2 = Number(prompt("enter any one number "));
+
+      calculater(num1, opt, num2);
+    </script>
+  </body>
+</html>

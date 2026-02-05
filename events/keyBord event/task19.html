@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  /* General page styling */
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1 {
+    color: #0b160b;
+    margin-bottom: 15px;
+  }
+
+  /* Password input styling */
+  #pwd {
+    width: 280px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  /* Focus effect */
+  #pwd:focus {
+    border-color: #0a8fe8; /* Microsoft blue */
+    box-shadow: 0 0 6px rgba(19, 136, 232, 0.755);
+  }
+
+  /* Disabled context menu feedback (optional) */
+  #pwd::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+     <!-- Input Field Protection
+    //     Task:
+    //     Inside a password input field, prevent:
+    //     Ctrl + C
+    //     Ctrl + V
+    //     Ctrl + X
+    //     Allow normal typing only. -->
+
+
+    <h1> Input Field Protection</h1>
+
+
+    <input id="pwd" type="password" autocomplete="current-password" placeholder="Enter Password">
+
+
+    <script>
+        let pwd =document.getElementById("pwd");
+
+        pwd.addEventListener('keydown',(e)=>{
+            const isModifier = e.ctrlKey || e.metakey;
+            if(isModifier) return;
+
+            let k = e.key.toLowerCase();
+            if(k ==="c" || k ==="v" || k==="x"){
+                e.preventDefault();
+            }
+        });
+        pwd.addEventListener("copy",(e)=>e.preventDefault());
+        pwd.addEventListener("cut",(e)=> e.preventDefault());
+        pwd.addEventListener("paste",(e)=>e.preventDefault());
+
+
+        pwd.addEventListener("contextmenu",(e)=>e.preventDefault());
+
+        pwd.addEventListener("dragover",(e)=>e.preventDefault());
+        pwd.addEventListener("drop",(e)=>e.preventDefault());
+
+        pwd.addEventListener("beforeinput",(e)=>{
+            if(e.inputType === "inserFromPaste" || e.inputType === "inserFromDrop"){
+                e.preventDefault();
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Disable Ctrl + C (Copy)</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint dolore tempore reiciendis mollitia qui corporis repellendus dicta autem deleniti error praesentium, possimus obcaecati, porro quidem dolores laborum quas fuga quae?
+    Hic dicta esse maxime accusamus quaerat voluptatum quam, delectus repellendus, assumenda asperiores, numquam dolore deleniti commodi quibusdam fugit totam porro eveniet molestiae alias autem voluptate? Nihil qui repellat velit nemo.</p>
+
+
+    <script>
+        document.addEventListener("keydown",function(event){
+            if(event.ctrlKey && event.key.toLowerCase()==="c" || event.key.toUpperCase()==="C")
+        {
+            event.preventDefault();
+            alert(`Ctrl+C is disable in this page you are not able to copy any thing from this page...! `)
+        }
+        })
+    </script>
+</body>
+</html>

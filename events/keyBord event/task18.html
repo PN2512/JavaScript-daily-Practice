@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Shortcut System</title>
+  <style>
+    #myDiv {
+      width: 300px;
+      height: 150px;
+      border: 2px solid black;
+      padding: 10px;
+      margin: 20px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .highlight {
+      outline: 3px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div id="myDiv">This is a sample div with some text.</div>
+
+  <script>
+    const myDiv = document.getElementById("myDiv");
+
+    document.addEventListener("keydown", function (event) {
+      // Check for Ctrl key
+      if (event.ctrlKey) {
+        // Prevent browser default actions (like Ctrl+A select all, Ctrl+B bold, etc.)
+        event.preventDefault();
+
+        switch (event.key.toLowerCase()) {
+          case "a":
+            // Highlight the div
+            myDiv.classList.toggle("highlight");
+            break;
+
+          case "b":
+            // Change background color randomly
+            myDiv.style.backgroundColor =
+              "#" + Math.floor(Math.random() * 16777215).toString(16);
+            break;
+
+          case "d":
+            // Clear text inside the div
+            myDiv.textContent = "";
+            break;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- // 4)Change the text color of a paragraph on mouse over. -->
+
+
+<p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vero deserunt illo! Excepturi, magni repellat saepe nesciunt facere porro eos cumque modi maxime doloremque, possimus nemo perspiciatis expedita et aspernatur?</p>
+
+
+<script>
+    let para=document.getElementById("para")
+    para.addEventListener("mouseover",()=>{
+        para.style.color="red";
+    });
+    para.addEventListener("mouseout",()=>{
+        para.style.color="black";
+    });
+</script>
+
+
+</body>
+</html>

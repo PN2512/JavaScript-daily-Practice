@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Class Existence</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: darkblue;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Check Class Existence Example</h2>
+
+  <p id="myElement" class="highlight">This element may have the class 'highlight'.</p>
+
+  <button onclick="checkClass()">Check Class</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkClass() {
+      
+      let element = document.getElementById("myElement");
+
+      
+      let hasClass = element.classList.contains("highlight");
+
+      
+      let result = document.getElementById("result");
+      if (hasClass) {
+        result.textContent = "The element has the class 'highlight'.";
+      } else {
+        result.textContent = "The element does NOT have the class 'highlight'.";
+      }
+    }
+  </script>
+
+</body>
+</html>

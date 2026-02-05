@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>querySelectorAll()</h2>
+
+    <button class="btn">Button 1</button>
+    <button class="btn">Button 2</button>
+    <button class="btn">Button 3</button>
+
+    <button onclick="styleButtons()">Style All buttons</button>
+
+    <script>
+      function styleButtons() {
+        let button = document.querySelectorAll(".btn");
+        button.forEach(function (btn) {
+          btn.style.backgroundColor = "teal";
+          btn.style.color = "red";
+          btn.style.borderRadius = "10px";
+          btn.style.padding = "10px 20px";
+          btn.style.border = "none";
+        });
+      }
+    </script>
+  </body>
+</html>
