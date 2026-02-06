@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #banner{
+            position: fixed;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: lightgreen;
+            color: black;
+            text-align: center;
+
+            padding: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>this is a window event for banner it will disappears after 3sec </h3>
+    <div id="banner">Internet Connected</div>
+
+
+    <script>
+        let banner=document.getElementById("banner");
+        window.addEventListener("online",()=>{
+            banner.style.display="block";
+
+            setTimeout(()=>{
+                banner.style.display="none"
+            },1500)
+        });
+        window.addEventListener("offline",()=>{
+            banner.style.display="none";
+
+            setTimeout(()=>{
+                banner.style.display="block"
+                banner.textContent="Internet Lost"
+                banner.style.background="red"
+            },1000)
+        })
+    </script>
+</body>
+</html>

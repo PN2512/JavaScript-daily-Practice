@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #css{
+            color: rebeccapurple;
+            text-align: center;
+            position: relative;
+            left: 20px;
+            top: 20px;
+        }
+        #img1{
+            width: 300px;
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="css">This is an web page </h2>
+    <p>  Task 4 (Basic):
+         Create a web page that displays “Page Loaded Successfully” in an alert box only after the entire page (HTML, CSS, images) is fully loaded.</p>
+
+        <img id="img1" src="https://images.pexels.com/photos/35920053/pexels-photo-35920053.jpeg" alt="this is a online image">
+
+
+        <script>
+
+            // let css=document.getElementById("css")
+            // let img=document.getElementById("img1")
+             window.addEventListener("load",()=>{
+                alert("Page Loaded Successfully..")
+
+             })
+
+
+             
+
+    
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        #user{
+            color: lightgreen;
+        }
+    </style> -->
+</head >
+<body id="user">
+    <h3>This is Online Offline Project Color changing </h3>
+    <script>
+
+        const user =document.getElementById("user")
+        window.addEventListener("online",()=>{
+            console.log('"Internet Connected.."')
+            user.textContent="You are Online"
+            user.style.background="lightgreen"
+        })
+        window.addEventListener("offline",()=>{
+            console.log("You are Offline ..")
+            user.textContent="Offline..! check Internet Connection."
+            user.style.background="pink"
+        })
+    </script>
+
+</body>
+</html>

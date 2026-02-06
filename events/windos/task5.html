@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="resizingView">Resizing window event </h3>
+
+
+
+    <script>
+       let view=document.getElementById("resizingView")
+       
+       function screenSize(){
+         let width=window.innerWidth;
+       if(width<=600){
+        view.textContent="mobile view"
+       }
+       else if(width <= 1024){
+        view.textContent="tablet view"
+       }
+       else{
+        view.textContent="desktop view"
+       }
+    }
+
+    screenSize();
+
+    window.addEventListener("resize",screenSize);
+    </script>
+</body>
+</html>
