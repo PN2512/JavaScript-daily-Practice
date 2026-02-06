@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Promise Internaet connection</h2>
+
+    <script>
+      function checkInternet() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (navigator.onLine) {
+              resolve("Internet Connected");
+            } else {
+              reject("No Internet");
+            }
+          }, 2000);
+        });
+      }
+
+      window.addEventListener("online", () => {
+        checkInternet()
+          .then((message) => {
+            console.log(message);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      });
+
+      window.addEventListener("offline", () => {
+        console.log("No Internet");
+      });
+    </script>
+  </body>
+</html>

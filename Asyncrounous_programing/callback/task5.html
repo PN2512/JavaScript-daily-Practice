@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Nested setTimeout (callback hell Introduction)</h3>
+
+    <script>
+      function loginSuccessful(callback) {
+        setTimeout(() => {
+          console.log("Login Successfully");
+          callback();
+        }, 1000);
+      }
+      function fatchUser(callback) {
+        setTimeout(() => {
+          console.log("Fatching User Profil");
+          callback();
+        }, 1000);
+      }
+      function fatchOrder(callback) {
+        setTimeout(() => {
+          console.log("Fetching User Order");
+          callback();
+        }, 1000);
+      }
+      function logoutSuccessful() {
+        setTimeout(() => {
+          console.log("Logout Successful");
+        }, 1000);
+      }
+
+      loginSuccessful(() => {
+        fatchUser(() => {
+          fatchOrder(() => {
+            logoutSuccessful();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

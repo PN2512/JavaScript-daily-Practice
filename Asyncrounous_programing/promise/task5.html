@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Promis all</h2>
+
+    <script>
+      function getUser() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({ name: "pravin", id: "1" });
+          }, 1000);
+        });
+      }
+      function getOrder() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Order 1", "Order 2");
+          }, 2000);
+        });
+      }
+      function getPayment() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Payment-1", "Payment-2");
+          }, 3000);
+        });
+      }
+
+      Promise.all([getUser(), getOrder(), getPayment()])
+
+        .then(([user, orders, payments]) => {
+          console.log("user:", user);
+          console.log("orders:", orders);
+          console.log("payments:", payments);
+        })
+        .catch((error) => {
+          console.log("One of this promise failed", error);
+        });
+
+      //  Explanation:
+      // - Promise.all waits for all promises to succeed.
+      // - If any promise rejects, it immediately goes to .catch() and no results are returned.
+    </script>
+  </body>
+</html>

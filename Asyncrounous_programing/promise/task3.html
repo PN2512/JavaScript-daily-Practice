@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Async / Await food order</h2>
+
+    <script>
+      function placeOrder() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Order Placed...");
+          }, 1000);
+        });
+    }
+        function prepareFood(orderStatus) {
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve("Food been Prepared....");
+            }, 1000);
+          });
+        }
+        function deliverFood(foodStatus){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve("Deliver food...")
+                },1000)
+            })
+        }
+      
+
+      async function proccessOrder(){
+        try{
+            let orderStatus = await placeOrder();
+            console.log(orderStatus);
+
+            let foodStatus = await prepareFood(orderStatus);
+            console.log(foodStatus);
+
+            let finalStatus =await deliverFood(foodStatus);
+            console.log(finalStatus);
+        }
+        catch(error){
+            console.error(error)
+        }
+      }
+
+      proccessOrder()
+
+    </script>
+  </body>
+</html>

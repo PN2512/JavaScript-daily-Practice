@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Promise.allSettled Exampl</h2>
+
+    <script>
+      function getUser() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({ name: "pravin", id: "1" });
+          }, 2000);
+        });
+      }
+      function getOrder() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            reject("failed to fatch order..");
+          }, 3500);
+        });
+      }
+      function getPayment() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({ payment: "paymnet-1", payemnt: "payment -2" });
+          }, 1500);
+        });
+      }
+      Promise.allSettled([getUser(), getOrder(), getPayment()]).then(
+        (results) => {
+          results.forEach((results, index) => {
+            console.log(
+              `Promise ${index +1}:`,
+              results.status,
+              results.value || results.reason,
+            );
+          });
+        },
+      );
+
+      //  Explanation:
+      // - Promise.allSettled waits for all promises to finish, no matter if they resolve or reject.
+      // - Each result has:
+      //   - status: "fulfilled" or "rejected"
+      //   - value: resolved value (if fulfilled)
+      //   - reason: error (if rejected)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Promise Chaining: Online Food Order</h2>
+
+    <script>
+      function orderPlace() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Order Placed");
+          }, 1000);
+        });
+      }
+      function prepareFood(orderStatus) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(orderStatus + "Food been Prepare..");
+          }, 1000);
+        });
+      }
+      function deliverFood(foodStatus) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(foodStatus + "Food Deliverd");
+          }, 1000);
+        });
+      }
+
+      orderPlace()
+        .then((orderStatus) => {
+          console.log(orderStatus);
+          return prepareFood(orderStatus);
+        })
+        .then((foodStatus) => {
+          console.log(foodStatus);
+          return deliverFood(foodStatus);
+        })
+        .then((finalStatus) => {
+          console.log(finalStatus);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

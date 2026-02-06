@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Callback for Validation</h3>
+
+
+    <script>
+
+        function validationUser(username,successCallback,errorCallback)
+        {
+            if(username.length > 5){
+                successCallback(username);
+                
+            }
+            else{
+                errorCallback(username);
+            }
+        }
+
+        function onSuccess(name){
+            console.log(` ${name}  valid `);
+        }
+        function onError(name){
+            console.log(`${name} not valid`);
+            
+        }
+
+
+        validationUser("vaibhav",onSuccess,onError);
+        validationUser("om",onSuccess,onError);
+    </script>
+</body>
+</html>

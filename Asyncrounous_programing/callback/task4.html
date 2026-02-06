@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>SetTimeOut Callback</h3>
+
+    <script>
+        function delayedMessage(message,delay,callback){
+            setTimeout(()=>{
+                console.log(message);
+                callback()
+            },delay)
+        }
+
+        function taskCompleate(){
+                console.log("Task Completed...");
+            
+        }
+
+        delayedMessage("this is delated message...!",5000,taskCompleate);
+    </script>
+
+
+</body>
+</html>

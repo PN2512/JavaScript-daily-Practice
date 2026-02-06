@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Promise race </h2>
+
+
+    <script>
+        function serverA(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    reject("Server A faild ");
+                },3000)
+            })
+        }
+        // function serverB(){
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             reject("server B failed..")
+        //         },2000)
+        //     })
+        // }
+
+        function serverB(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("server B Is runing ")
+                })
+            })
+        }
+        function serverC(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    reject("server c faild..")
+                },1000)
+            })
+        }
+
+        Promise.race([serverA(),serverB(),serverC()])
+        .then(fastest =>{
+            console.log("fastest successful respond",fastest);
+            
+        })
+        .catch(error => {
+            console.error("All Promise faild:",error);
+        })
+    </script>
+</body>
+</html>

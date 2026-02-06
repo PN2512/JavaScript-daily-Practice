@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Promise.race Example</h2>
+
+    <script>
+      function serverA() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Server A respont in 3s");
+          }, 3000);
+        });
+      }
+      function serverB() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Server B respond in 2s");
+          }, 2000);
+        });
+      }
+      function serverC() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Server C respond in 1s");
+          }, 4000);
+        });
+      }
+
+      Promise.race([serverA(), serverB(), serverC()])
+        .then((fastest) => {
+          console.log("Fastest responce:", fastest);
+        })
+        .catch((error) => {
+          console.error("Error :", error);
+        });
+
+      //  Explanation:
+      // - Promise.race returns the first promise that settles (resolve or reject)
+      // - Here, Server C resolves first after 1s → fastest response
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>callback after operation</h3>
+
+    <script>
+      function downloadFile(callback) {
+        console.log("File Downloading..");
+
+        setTimeout(() => {
+          console.log("file downloaded");
+          callback();
+        }, 2000);
+      }
+
+      function afterdownload() {
+        setTimeout(() => {
+          console.log("Now you can open downloaded file..");
+        }, 1000);
+      }
+      downloadFile(afterdownload);
+    </script>
+  </body>
+</html>
