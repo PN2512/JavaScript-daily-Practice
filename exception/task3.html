@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Number Type Check</h2>
+
+    <script>
+      function numberType(value) {
+        try {
+          let num = Number(value);
+          if (isNaN(num)) {
+            throw new Error("This value is not a number");
+          }
+          console.log("The value is a number");
+        } catch (error) {
+          console.error(error.message);
+        } finally {
+          console.log("Check Complete");
+        }
+      }
+
+      let enterValue = prompt("Enter a value");
+
+      numberType(enterValue);
+    </script>
+  </body>
+</html>

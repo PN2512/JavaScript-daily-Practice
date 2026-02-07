@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>String Length Validator</h2>
+
+
+    <script>
+        
+        function validateStr(str){
+            try{
+                if(str.length<5){
+                    throw new Error("String length is less then 5")
+                }
+                console.log("valid String")
+            }
+            catch(error){
+                console.error(error.message)
+            }
+        }
+        let user=prompt("Enter a name")
+
+        validateStr(user);
+
+
+    </script>
+</body>
+</html>
