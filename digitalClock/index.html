@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="demo"></h1>
+    <script>
+        function updateClock(){
+            let currenetDate=new Date();
+            // console.log(currenetDate);
+            let hour=currenetDate.getHours()
+            let minutes=currenetDate.getMinutes();
+            let seconds=currenetDate.getSeconds();
+            console.log(hour+"-"+minutes+"-"+seconds);
+            // console.log(minutes);
+            // console.log(seconds);
+
+            
+            hour=hour<10 ?  `0${hour}`:hour;
+            minutes=minutes<10 ? `0${minutes}`:minutes;
+            seconds=seconds<10 ? `0${seconds}`:seconds;
+            document.getElementById("demo").innerHTML=`${hour}:${minutes}:${seconds}`
+
+            
+        }
+        setInterval(updateClock,1000)
+        updateClock();
+    </script>
+</body>
+</html>
