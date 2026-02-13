@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fatchdatabyAsyncAwait()">fatch</button>
+
+
+    <script>
+        function fatchdata(){
+            return new Promise((resolve,reject)=>{
+               setTimeout(()=>{
+                 console.log("fatch data..")
+                resolve();
+               },1000)
+            })
+        }
+        function processData(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Data Process")
+                    resolve()
+                },1000)
+            })
+        }
+       function saveData(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Data Saved")
+                    resolve()
+                },1000)
+            })
+        }
+
+        async function fatchdatabyAsyncAwait(){
+            await fatchdata();
+            await processData();
+            await saveData()
+
+            
+        }
+    </script>
+</body>
+</html>

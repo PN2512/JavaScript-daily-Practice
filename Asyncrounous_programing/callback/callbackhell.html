@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fatchData(callBack) {
+        setTimeout(() => {
+          console.log("Data Fatched...");
+          callBack();
+        }, 2000);
+      }
+      function processData(callBack) {
+        setTimeout(() => {
+          console.log("Data Processed..");
+          callBack();
+        }, 2000);
+      }
+      function saveData(callBack) {
+        setTimeout(() => {
+          console.log("Data Save Saccessfully...");
+          callBack();
+        }, 2000);
+      }
+
+      fatchData(() => {
+        processData(() => {
+          saveData(() => {
+            setTimeout(() => {
+              console.log("task submited");
+            }, 1000);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
