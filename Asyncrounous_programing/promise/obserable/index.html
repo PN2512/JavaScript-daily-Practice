@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Tracking</title>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.2/rxjs.umd.min.js" integrity="sha512-9rY+ul/tDd5uFmYIG3Wf6sTYh44qwK7ZUcAejPR1RzZ4I09ubJBeOoMvLtIUjXWN5ZfR8WgZx9gwnZhMQ0ve9A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  const { Observable } = rxjs;
+
+  let trackOrder = new Observable(observer => {
+    console.log('Order Confirmed......');
+
+    setTimeout(() => observer.next("Order being prepared..."), 1000);
+
+    setTimeout(() => {
+      let dbAvailable = true;
+      if (dbAvailable) {
+        observer.next("Delivery boy available...");
+      } else {
+        observer.next("Delivery boy not available...");
+      }
+    }, 2000);
+
+    setTimeout(() => {
+      let orderProceed = true;
+      if (orderProceed) {
+        observer.next("Order is on the way...");
+      } else {
+        observer.next("Order did not proceed...");
+      }
+    }, 3000);
+
+    setTimeout(() => {
+      observer.next("Order delivered successfully...");
+      observer.complete();
+    }, 4000);
+  });
+
+  trackOrder.subscribe({
+    next: data => console.log(data),
+    error: err => console.log(err),
+    complete: () => console.log("Order complete..")
+  });
+</script>
+
+</body>
+</html>
