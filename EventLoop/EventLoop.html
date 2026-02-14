@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function A(){
+            console.log("A")
+        }
+        function B(){
+            console.log("B")
+        }
+        function C(){
+            console.log("C")
+        }
+        function D(){
+            console.log("D")
+        }
+
+        A(); //syncronus
+        setTimeout(B,3000);//asyncronus
+        Promise.resolve().then(()=>{C()})//asyncronus
+        D();//syncronus
+    </script>
+</body>
+</html>
