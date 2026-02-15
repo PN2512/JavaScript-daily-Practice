@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body class="light">
+
+    <h2>this is using session storege </h2>
+    <button>dark</button>
+
+
+    <script>
+        let btn=document.querySelector("button")
+        let body=document.querySelector("body")
+
+        // btn.addEventListener("click",()=>{
+        //     body.classList.toggle("dark");
+        // })
+
+
+        btn.addEventListener("click",()=>{
+            if(body.classList.contains("dark")){
+                body.classList.replace("dark","light")
+                btn.textContent="dark";
+            }
+            else{
+                body.classList.replace("light","dark")
+                btn.textContent="light"
+            }
+        })
+    </script>
+</body>
+</html>

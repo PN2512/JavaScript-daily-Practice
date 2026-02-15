@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle</title>
+    <style>
+        .dark {
+            background-color: black;
+            color: white;
+        }
+        .light {
+            background-color: white;
+            color: black;
+        }
+        body {
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>Dark</button>
+
+    <script>
+        let btn = document.querySelector("button");
+        let body = document.querySelector("body");
+
+        // Load saved theme
+        let saveTheme = localStorage.getItem("theme") || "light";
+        body.classList.add(saveTheme);
+        btn.textContent = saveTheme === "dark" ? "Light" : "Dark";
+
+        // Toggle theme
+        btn.addEventListener("click", () => {
+            if (body.classList.contains("dark")) {
+                body.classList.replace("dark", "light");
+                btn.textContent = "Dark";
+                localStorage.setItem("theme", "light");
+            } else {
+                body.classList.replace("light", "dark");
+                btn.textContent = "Light";
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    </script>
+</body>
+</html>

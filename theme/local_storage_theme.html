@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dark{
+            background-color:black;
+            color: white;
+        }
+        .light{
+            background-color: white;
+            color: black;
+        }
+        body{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            padding: 15px 20px;
+            cursor: grab;
+            /* width: 50px;
+            height: 20px; */
+            
+        }
+    </style>
+
+</head>
+<body>
+
+    <button>Dark</button>
+
+    <script>
+
+
+        let btn=document.querySelector("button")
+        let body=document.querySelector("body")
+
+        btn.addEventListener("click",()=>{
+            if(body.classList.contains("dark")){
+                body.classList.replace("dark","light")
+                btn.textContent="dark"
+                localStorage.setItem("theme","dark")
+
+            }
+            else{
+                body.classList.replace("light","dark")
+                btn.textContent="light"
+                localStorage.setItem("theme","light")
+            }
+        })
+
+        let saveTheme=localStorage.getItem("theme")
+
+        if(saveTheme=="dark"){
+            body.classList.add("light")
+        }
+        else{
+            body.classList.add("dark")
+        }
+
+        let text=localStorage.getItem("text")
+
+        if(text=="dark"){
+            btn.textContent.classList.add("light")
+        }
+        else{
+            btn.textContent.classList.add("dark")
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
